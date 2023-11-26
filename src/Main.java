@@ -2,9 +2,10 @@ import zd2.Cirle;
 import zd2.Figure;
 import zd2.Square;
 import zd2.Triygolnik;
+import zd3.A;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CloneNotSupportedException {
         //1
         Director director = new Director();
         Rabochi rabochi = new Rabochi();
@@ -26,11 +27,16 @@ public class Main {
                 continue;
 
             }
-            System.out.println(figure[i].P());
+            System.out.println("P " + figure[i].P());
             sum = sum + figure[i].P();
 
 
         }
-        System.out.println(sum);
+        System.out.println("sum P = " + sum);
+        //3
+        A a = new A(200, "Test");
+        A b = (A)a.clone();
+        System.out.println(b.i);
+        System.out.println(b.s);
     }
 }
